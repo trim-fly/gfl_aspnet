@@ -1,0 +1,8 @@
+@model List<forummvc.ViewModels.ThreadsViewModel>
+
+
+@foreach (var thread in Model)
+{
+    @:@Url.Action("Index", "Thread", new {id = thread.Id}) @thread.Title :: DisplayName 
+}
+    

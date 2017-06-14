@@ -1,0 +1,9 @@
+﻿@model List<forummvc.ViewModels.CategoriesViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@for (var i = 0; i < Model.Count; i++)
+{
+    @:<a href="@Url.Action("Threads", "Home", new {id=i})">@Model[i].Title</a> :: @Model[i].ThreadsCount<br />
+}
